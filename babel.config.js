@@ -1,11 +1,6 @@
 module.exports = function(api) {
   api.cache(false)
   return {
-    // rootMode: 'upward',
-    // babelrcRoots: [
-    //   '.',
-    //   // "packages/*",
-    // ],
     compact: false,
     presets: ['@babel/preset-typescript', ['@babel/preset-env', { modules: 'auto' }]],
     plugins: [
@@ -34,22 +29,5 @@ module.exports = function(api) {
         compact: true,
       },
     },
-    // rootMode: 'upward',
-    // overrides: [
-    //   {
-    //     plugins: [
-    //       [
-    //         'module-resolver',
-    //         {
-    //           root: ['./src'],
-    //           alias: {
-    //             src: './src',
-    //           },
-    //         },
-    //       ],
-    //     ],
-    //     compact: true,
-    //   },
-    // ],
   }
 }
