@@ -1,0 +1,11 @@
+/.jest
+
+/node_modules
+/yarn-error.log
+
+/coverage
+
+.env**
+!.env.example
+
+/lib

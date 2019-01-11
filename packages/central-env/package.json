@@ -1,0 +1,76 @@
+{
+  "name": "centralenv",
+  "version": "1.0.2",
+  "main": "index.js",
+  "files": [
+    "/lib",
+    "/bin"
+  ],
+  "author": {
+    "name": "Ken Owada",
+    "email": "kenpm0x0a@plusuno.jp"
+  },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/ken0x0a/centralenv.git"
+  },
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "dev": "yarn ts src/index.ts",
+    "ts": "babel-node --extensions '.ts,.js'",
+    "tsd": "TS_NODE_PROJECT=tsconfig.node.json node -r 'ts-node/register' -r 'tsconfig-paths/register' -r 'dotenv/config' -r '@babel/register' --inspect",
+    "n": "node -r '@babel/register' --inspect",
+    "build": "NODE_ENV=production TS_NODE_FILES=true TS_NODE_PROJECT=tsconfig.node.json webpack --config webpack.config.ts --progress --profile --colors",
+    "build.watch": "yarn build --watch",
+    "build2": "tsc",
+    "test": "jest",
+    "watch": "jest --watch"
+  },
+  "keywords": [
+    "env",
+    "environment",
+    "variable",
+    "dotenv",
+    "monorepo",
+    "workspace",
+    "docker"
+  ],
+  "bin": {
+    "centralenv": "bin/central-env.js"
+  },
+  "dependencies": {
+    "chalk": "^2.4.2",
+    "yargs": "^12.0.5"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/node": "^7.2.0",
+    "@babel/plugin-proposal-class-properties": "^7.2.1",
+    "@babel/plugin-syntax-bigint": "^7.2.0",
+    "@babel/plugin-transform-modules-commonjs": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-typescript": "^7.1.0",
+    "@babel/runtime": "^7.2.0",
+    "@types/jest": "^23.3.10",
+    "@types/lodash": "^4.14.119",
+    "@types/node": "^10.12.15",
+    "@types/webpack-node-externals": "^1.6.3",
+    "awesome-typescript-loader": "^5.2.1",
+    "babel-core": "^7.0.0-bridge",
+    "babel-jest": "^23.6.0",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-module-resolver": "^3.1.1",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "jest": "^23.6.0",
+    "lodash": "^4.17.11",
+    "prettier": "^1.15.3",
+    "source-map-loader": "^0.2.4",
+    "ts-node": "^7.0.1",
+    "tsconfig-paths": "^3.7.0",
+    "typescript": "^3.2.2",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
