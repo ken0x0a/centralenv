@@ -8,5 +8,6 @@
 .env**
 !.env.example
 
-/lib
+# track /lib
+# /lib
 .tmp
