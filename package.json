@@ -1,8 +1,6 @@
 {
   "name": "tools",
   "version": "0.0.0",
-  "repository": "",
-  "author": "Ken <k.o@plusuno.jp>",
   "private": true,
   "scripts": {
     "test": "lerna exec -- yarn run test"

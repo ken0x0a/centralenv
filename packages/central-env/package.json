@@ -1,6 +1,7 @@
 {
   "name": "centralenv",
-  "version": "1.0.2",
+  "description": "Central management tool for dotenv (.env)",
+  "version": "1.0.3",
   "main": "index.js",
   "files": [
     "/lib",
@@ -10,9 +11,13 @@
     "name": "Ken Owada",
     "email": "kenpm0x0a@plusuno.jp"
   },
+  "homepage": "https://github.com/ken0x0a/centralenv/tree/master/packages/central-env#readme",
   "repository": {
-    "type" : "git",
-    "url" : "https://github.com/ken0x0a/centralenv.git"
+    "type": "git",
+    "url": "https://github.com/ken0x0a/centralenv.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ken0x0a/centralenv/issues"
   },
   "license": "MIT",
   "private": false,
@@ -25,17 +30,9 @@
     "build.watch": "yarn build --watch",
     "build2": "tsc",
     "test": "jest",
+    "_publish": "rm -rf .tmp && yarn build && yarn ts scripts/publish.ts && cd .tmp && npm publish",
     "watch": "jest --watch"
   },
-  "keywords": [
-    "env",
-    "environment",
-    "variable",
-    "dotenv",
-    "monorepo",
-    "workspace",
-    "docker"
-  ],
   "bin": {
     "centralenv": "bin/central-env.js"
   },
@@ -54,6 +51,7 @@
     "@babel/preset-env": "^7.2.0",
     "@babel/preset-typescript": "^7.1.0",
     "@babel/runtime": "^7.2.0",
+    "@types/fs-extra": "5.0.4",
     "@types/jest": "^23.3.10",
     "@types/lodash": "^4.14.119",
     "@types/node": "^10.12.15",
@@ -64,6 +62,7 @@
     "babel-loader": "^8.0.5",
     "babel-plugin-module-resolver": "^3.1.1",
     "babel-plugin-transform-remove-console": "^6.9.4",
+    "fs-extra": "7.0.1",
     "jest": "^23.6.0",
     "lodash": "^4.17.11",
     "prettier": "^1.15.3",
@@ -74,5 +73,14 @@
     "webpack": "^4.28.2",
     "webpack-cli": "^3.1.2",
     "webpack-node-externals": "^1.7.2"
-  }
+  },
+  "keywords": [
+    "env",
+    "environment",
+    "variable",
+    "dotenv",
+    "monorepo",
+    "workspace",
+    "docker"
+  ]
 }

@@ -24,6 +24,9 @@ NOTE:
 
 ### Install
 
+You can use `centralenv` for any language if you have nodejs installed on your computer.  
+Not only for javascript project.
+
 ```sh
 npm i centralenv -D
 yarn add -D centralenv
@@ -96,7 +99,7 @@ NOT_EXISTING_KEY=
 - [x] support stages ['development', 'production', 'test']
 - [x] command line args
 - [ ] log output, by relative path, from project root.
-- [ ] generate publish script, to avoid unnecessary devDependencies to be installed.
+- [x] generate publish script, to avoid unnecessary devDependencies to be installed.
 - [ ] prefix ( eg: "API_SERVER_" )
 - [ ] encryption / decryption
 - [ ] connect git repo ( using as source with encryption, like fastlane )
