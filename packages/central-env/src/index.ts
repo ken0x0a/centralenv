@@ -29,7 +29,7 @@ const args = yargs
     keySourceFile: '.env.example',
     sourceFile: '.env',
     stages: ['development', 'production', 'test'],
-    sourceDir: homeDir,
+    sourceDir: `${homeDir}/.env`,
     // stageLess: false,
   })
   // .boolean('stageLess')
