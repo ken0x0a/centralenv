@@ -23,6 +23,7 @@ const homeDir = os.homedir()
 const args = yargs
   .version(false)
   .pkgConf('central-env')
+  .env('CENTRALENV')
   .help()
   .default({
     keySourceFile: '.env.example',
@@ -37,6 +38,7 @@ const args = yargs
   .alias('p', 'projectName')
   .alias('h', 'help')
   .alias('k', 'keySourceFile')
+  .alias('d', 'sourceDir')
   .coerce('stages', (stages) => (stages === true ? '' : stages))
   .alias('s', 'stages')
   .describe('projectName', '.env.<projectName>.<stage>').argv
@@ -80,7 +82,7 @@ function readSource(stage: Stages): { [EnvKey: string]: string } {
   const sourceFilename = '.env'
   const stagePostfix = stage ? `.${stage}` : ''
   const sourceFile = path.resolve(
-    homeDir,
+    args.sourceDir,
     `${sourceFilename}${projectName}${stagePostfix}`,
   )
   isFileExist(sourceFile)

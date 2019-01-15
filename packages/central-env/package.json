@@ -1,7 +1,7 @@
 {
   "name": "centralenv",
   "description": "Central management tool for dotenv (.env)",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "index.js",
   "files": [
     "/lib",

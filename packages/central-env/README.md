@@ -8,7 +8,10 @@ Source will be on Github soon... (when finish separating from monorepo)
   - [Usage:](#usage)
     - [Simple](#simple)
     - [Multiple Stages: `centralenv`](#multiple-stages-centralenv)
+  - [.gitignore](#gitignore)
 - [Todo](#todo)
+- [CHANGE LOG](#change-log)
+  - [1.0.4](#104)
 
 ## Motivation
 
@@ -92,6 +95,12 @@ NOT_EXISTING_KEY=
     - .env.prod
     - .env.someother
 
+### .gitignore
+
+```
+.env**
+!.env.example
+```
 
 ## Todo
 
@@ -104,4 +113,17 @@ NOT_EXISTING_KEY=
 - [ ] encryption / decryption
 - [ ] connect git repo ( using as source with encryption, like fastlane )
 
+## CHANGE LOG
+
+### 1.0.4
+**BREAKING CHANGE**
+
+- defaultSourceDir was changed from `$HOME` => `$HOME/.env` for convenience.
+- Support environment variables with prefix "CENTRALENV".
+
+if you are already using `< 1.0.3`, you can use same way by doing follows.
+
+```sh
+echo 'export CENTRALENV_SOURCE_DIR=~/.env ' >> ~/.bash_profile
+```
 
